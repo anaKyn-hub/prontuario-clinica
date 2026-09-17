@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background-color: rgb(244, 243, 243);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 6vh;
+    color: #145EAB;
+    margin: 2% 0% 2% 2.5%;
+}
+
+.container .painel {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items:flex-start;
+    transition: 0.05s;
+    box-sizing: border-box;
+}
+
+.painel a { /* Removi o margin:1% do card-all e colocamos padding aqui para não ultrapassar os limites da div*/
+    box-sizing: border-box;
+    width: 400px;
+    padding: 1%;
+}
+
+.painel .card-all{
+    background-color: #007FFF;
+    text-decoration: none;
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-content: start; 
+    border-radius: 20px;
+    transition: 0.3s;
+    box-sizing: border-box;
+}
+
+.painel .card-all:hover{
+    height: 240px;
+    width: 580px;
+    box-shadow: 5px 5px 8px #7a97b5;
+    transition: 0.3s;
+}
+
+.card-all .card-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+.card-text h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5vh;
+    margin-bottom: 2vh;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #145EAB;
+}
+
+a, .card-text h2{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.5vh;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px #145EAB;
+}
+
+.card-all .icone{
+    fill: #379bff;
+    width: 40%;
+    height: auto;
+    margin: 8%;
+}
+
+@media (min-width: 1600px) {
+    .painel a{ /* Removi o margin:1% do card-all e colocamos padding aqui para não ultrapassar os limites da div (pai)*/
+        box-sizing: border-box;
+        width: 30%;
+        padding: 1%;
+    }
+}

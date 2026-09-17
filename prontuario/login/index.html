@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prontuários</title>
+    <link rel="icon" href="src/app.png"  type="image/png">
+    <link rel="stylesheet" href="style/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body >
+    <main  class="corpo">
+
+        <div class="container">
+
+            <div class="apresentaçao">
+                <h2 class="titulo">Seja Bem vindo</h2>
+                <p class="textim"> Faça seu login e aproveite o site</p>
+            </div>
+
+            <div class="campos">
+                <form action="" class="formulario">
+    
+                    <div class="input-group">
+                        <img class="icon" src="/login/src/user.png" alt="email">
+                        <input type="email" placeholder="usuario@email.com">
+                    </div>
+
+                    <div class="input-group">
+                        <img class="icon" src="/login/src/lock.png" alt="senha">
+                        <input type="password" placeholder="••••••••••••">
+                    </div>
+    
+                    <a class="esqueci" onclick="alert('Tela de recuperação de senha em breve.')">Esqueceu a Senha?</a>
+
+                    <button class="login" type="button" onclick="window.location.href='../home/html/Home.html'">Entrar</button> <!-- Isso deverá estar numa função no scritp js -->
+                </form>
+            </div>
+
+            <div class="esqueci">
+
+                <button class="login" type="button" onclick="window.location.href='../cadastro/cadastro.html'">Cadastre-se</button> <!-- Isso deverá estar numa função no scritp js -->
+                
+            </div>
+        </div>
+
+    </main>
+</body>
+
+</html>

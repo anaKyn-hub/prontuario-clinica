@@ -1,0 +1,256 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;   
+    overflow-x: hidden;
+}
+
+body{
+    margin: 0;
+}
+
+.corpo{
+    width: 100vw;
+    min-height: 100vh;
+
+    background-image: url(/login/src/imagem_de_fundo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.container{
+    width: 900px;
+    height: 100vh;
+
+    background-color: white;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    clip-path: path('M 200 0 C -30 250, 380 600, 0 1032 L 10000 9856 L 1000 0 Z');
+}
+
+.apresentaçao{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+   
+}
+
+.titulo{
+    font-size: 50px;
+    font-weight: 700;
+    color: #222;
+}
+.textim{
+    margin-top: 10px;
+    color: #666;
+    font-size: 16px;
+}
+.campos{
+    margin-top: 50px;
+   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;
+}
+
+
+.input-group{
+    width: 320px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 12px 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 30px;
+
+    background-color: #fff;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+}
+
+.input-group input{
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    margin-left: 10px;
+
+    font-size: 16px;
+    color: #555;
+}
+
+.esqueci{
+    width: 320px;
+
+    text-align: right;
+
+    font-size: 13px;
+    color: #999;
+
+    cursor: pointer;
+}
+
+.esqueci:hover{
+    color: #ff8400;
+}
+
+.login{
+    width: 320px;
+
+    padding: 14px;
+
+    border: none;
+    border-radius: 30px;
+
+    background-color: #ff8400;
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+.esqueci .login{
+    margin-top: 25px;
+
+}
+.login:hover{
+    background-color: #e67600;
+}
+.formulario .esqueci{
+width: 135px;
+
+}
+
+.formulario .login{
+margin-top: 20px;
+}
+
+@media (min-width: 768px) and (max-width: 1300px){
+
+    .container{
+        width: 700px;
+
+        clip-path: path('M 200 0 C -50 400, 420 500, 0 1000 L 1000 1000 L 1000 0 Z');
+    }
+    .apresentaçao{
+        margin-left: 150px;
+    }
+    .campos{
+        margin-left: 150px;
+    }
+   .esqueci{
+        margin-left: 150px;
+
+   }
+
+}
+
+
+@media (max-width: 767px){
+
+    .container{
+        width: 100vw;
+        height: 100vh;
+
+        clip-path: none;
+
+        background: rgba(0,0,0,0.45);
+
+        padding: 20px;
+    }
+
+    .titulo{
+        font-size: 38px;
+        color: #ffd010;
+    }
+
+    .textim{
+        color: white;
+        font-size: 15px;
+    }
+
+    .campos{
+        width: 100%;
+    }
+
+    .formulario{
+        width: 100%;
+    }
+
+    .input-group{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .esqueci{
+        width: 100%;
+        max-width: 320px;
+        display: flex;
+        justify-content: center;       
+        color: #eee;
+    }
+
+
+    .login{
+        width: 100%;
+        max-width: 180px;
+    }
+
+    .esqueci .login{
+        margin-top: 40px;
+    }
+    
+
+     
+}
+@media(min-width: 1301px){
+.apresentaçao {
+ margin-left: 180px;
+}
+.esqueci {
+ margin-left: 180px;
+
+}
+.campos {
+ margin-left: 180px;
+
+}
+
+}

@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 300;
+}
+
+::selection {
+    background-color: #ff8400;
+    color: white;
+}
+
+body {
+    /*background-color:rgb(9, 255, 0) ;*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corpo { 
+    /*background-color:aqua;*/
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    height: 100vh;
+}
+
+header {
+    /*background-color:blueviolet;*/
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 90%;
+    height: 20vh;
+    padding: 5px;
+
+    border-bottom: 1px solid #b1bdc8;
+}
+
+#logo1 {
+    box-sizing: border-box;
+    width: 210px;
+    height: 60px;
+}
+
+#logo2 {
+    box-sizing: border-box;
+    width: 110px;
+    height: 105px;
+}
+
+main {
+    /*background-color:brown;*/
+
+    box-sizing: border-box;
+    width: 90%;
+    height: 88vh;
+    padding-bottom: 3%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1%;
+}
+
+#titulo {
+    /*background-color: rgb(243, 247, 6);*/
+
+    width: 90%;
+    height: 12vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#titulo h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    text-align: center;
+    color: #ff8400;
+}
+
+#descricao {
+    margin-top: 1%;
+    font-size: 15px;
+    text-align: center;
+}
+
+form {
+    /*background-color: rgb(255, 195, 205);*/
+    box-sizing: border-box;
+
+    width: 90%;
+    height: 88vh;
+
+    padding: 1%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.agrup_campo{
+    /*background-color:rgb(184, 195, 255);*/
+    width: 80%;
+    height: 10%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.agrup_campo label {
+    display: flex;
+    align-items: center;
+}
+
+.asterisco {
+    color: red;
+}
+
+.icones {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-right: 1%;
+    fill: #ffffff;
+    background-color: #ff8400;
+    border-radius: 3.5px;
+    padding: 2px;
+}
+
+.agrup_campo input {
+    border-radius: 4px;
+    border-style: solid;
+    border: 1px solid #b1bdc8;
+    padding: 2%;
+}
+
+.agrup_campo input:hover {
+    border-radius: 4px;
+    border-style: solid;
+    border: 1px solid #555d64;
+}
+
+.campo {
+    background-color: transparent;
+
+    width: 100%;
+    height: 60%;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: 200;
+}
+
+#cadastrar {
+    background-color:  #145eab;
+    
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: medium;
+    color: #ffffff;
+
+    width: 15vw;
+    height: 5vh;
+
+    border-radius: 5px;
+    border: none;
+
+    margin-top: 2%;
+}
+
+#cadastrar:hover {
+    background-color: #ff8400;
+}
+
+.radio {
+    box-sizing: border-box;
+    /*background-color:rgb(88, 148, 125);*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: start;
+
+    width: 80%;
+    height: 6%;
+    margin-top: 2%;
+}
+
+.termo {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 60%;
+
+    font-size: 1rem;
+}
+
+.radio a {
+    color: #145eab;
+}
+
+.radio a:visited {
+    color: rgb(2, 0, 128);
+}
+
+.radio a:hover {
+    color: #145eab;
+}
+
+@media (max-width: 650px) {
+  * {
+    font-size: small;
+  }
+
+  .corpo {
+    width: 98%;
+  }
+}
+
+@media (max-height: 700px) {
+  body {
+    overflow-y: scroll;
+  }
+}
