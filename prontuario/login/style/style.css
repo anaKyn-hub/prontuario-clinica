@@ -19,7 +19,7 @@ body{
     width: 100vw;
     min-height: 100vh;
 
-    background-image: url(/login/src/imagem_de_fundo.jpg);
+    background-image: url(../../login/src/imagem_de_fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
