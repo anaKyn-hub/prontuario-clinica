@@ -20,19 +20,124 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 
-    width: 70%;
+    width: 100%;
     height: 100vh;
 }
 
 header {
+    margin: 0 0 0 4%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    
 }
 
 #logo1 {
     box-sizing: border-box;
     width: 210px;
     height: 60px;
+}
+
+main {
+    box-sizing: border-box;
+    width: 90%;
+    height: 88vh;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+#titulo {
+    width: 100%;
+    margin-bottom: 70px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#titulo h1{
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    color: #ff8400;
+}
+
+#descricao {
+    margin: 1% 1% 10px 0;
+    text-align: start;
+    font-size: 15px;
+    text-align: start;
+}
+
+form {
+    box-sizing: border-box;
+
+    width: 100%;
+    height: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+#campoEmail {
+    width: 800px;
+    height: 30px;
+    border: solid 1px gray;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.acoes {
+    margin: 2% 0 0 0;
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+}
+
+.acoes button {
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 1%;
+    
+}
+
+.botao-cancelar {
+    background-color: white;
+    color: #222;
+    border: 1px solid #ccc;
+}
+
+.botao-enviar {
+    background-color: #ff8400;
+    color: white;
+    border: 1px solid #ff8400;
+}
+
+.botao-enviar:hover {
+    background-color: #ff7300;
+    border-color: #ff7300;
+}
+
+.botao-cancelar:hover {
+    background-color: #f5f5f5;
 }

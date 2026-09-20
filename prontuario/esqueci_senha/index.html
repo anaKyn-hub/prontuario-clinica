@@ -4,31 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperação de Senha</title>
-    <link rel="stylesheet" href="style/styleEsqueci">
+    <link rel="stylesheet" href="style/styleEsqueci.css">
 </head>
 <body>
     <div class="corpo">  
         <header>
             <img id="logo1" src="src/logo_empresa.png" alt="Logo da FAM">
-            <img src="" alt="">
         </header>
         <main>
-            <div id="titulo">
-                <h1>Verifique seu e-mail e insira uma nova senha.</h1>
-                <p id="descricao">Enviamos o código para ...</p>
+            <div class="container">
+                <div id="titulo">
+                    <h1>Insira seu e-mail para recuperação de senha.</h1>
+                </div>
+                <form action="">
+                <div>
+                        <p id="descricao">Digite seu e-mail abaixo.</p>
+                        <input type="email" id="campoEmail" name="E-mail" required placeholder="  E-mail*">
+                    </div> 
+                    <div class="acoes">
+                        <button class="botao-cancelar">Cancelar</button>
+                        <button class="botao-enviar">Enviar</button>
+                    </div>
+                </form>
             </div>
-            <form action="">
-               <div>
-                    <input type="email" id="campoEmail" name="E-mail" required placeholder="example@email.com">
-                </div> 
-                <div>
-                    <p>Mínimo 8 caracteres.</p>
-                    <p>Necessário conter letras maíusculas/minúsculas e números</p>
-                </div>
-                <div>
-                    <input type="submit" value="Enviar">
-                </div>
-            </form>
         </main>
     </div>
 </body>
