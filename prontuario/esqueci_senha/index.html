@@ -4,11 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperação de Senha</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="style/styleEsqueci">
-=======
     <link rel="stylesheet" href="style/styleEsqueci.css">
->>>>>>> 07fc0203883336536ae7954b6d85f9560d93db13
+
 </head>
 <body>
     <div class="corpo">  
@@ -21,13 +18,13 @@
                     <h1>Insira seu e-mail para recuperação de senha.</h1>
                 </div>
                 <form action="">
-                <div>
+                    <div>
                         <p id="descricao">Digite seu e-mail abaixo.</p>
                         <input type="email" id="campoEmail" name="E-mail" required placeholder="  E-mail*">
                     </div> 
                     <div class="acoes">
-                        <button class="botao-cancelar">Cancelar</button>
-                        <button class="botao-enviar">Enviar</button>
+                        <button class="botao-cancelar" type="button" onclick="window.location.href='../login/index.html'">Cancelar</button> <!-- Isso deverá estar numa função no scritp js -->
+                        <button class="botao-enviar" type="button" onclick="window.location.href='IndexNovaSenha.html'" >Enviar</button> <!-- Isso deverá estar numa função no scritp js -->
                     </div>
                 </form>
             </div>

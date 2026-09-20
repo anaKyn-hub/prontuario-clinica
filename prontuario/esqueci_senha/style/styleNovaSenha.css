@@ -66,7 +66,7 @@ main {
 
 #titulo {
     width: 100%;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
 
     display: flex;
     flex-direction: column;
@@ -99,9 +99,23 @@ form {
     align-items: start;
 }
 
-#campoEmail {
+#campoSenha {
     width: 800px;
     height: 30px;
+    border: solid 1px gray;
+    border-radius: 10px;
+    margin: 0 0 2% 0;
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#campoSenhaNovamente {
+    width: 800px;
+    height: 30px;
+    margin: 2% 0 0 0;
     border: solid 1px gray;
     border-radius: 10px;
     padding: 10px;
@@ -109,6 +123,11 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+}
+
+.ajuda {
+    margin: 3% 0 0 0;
+    color: #ff5e00;
 }
 
 .acoes {
@@ -135,13 +154,13 @@ form {
     border: 1px solid #ccc;
 }
 
-.botao-enviar {
+.botao-salvar {
     background-color: #ff8400;
     color: white;
     border: 1px solid #ff8400;
 }
 
-.botao-enviar:hover {
+.botao-salvar:hover {
     background-color: #ff7300;
     border-color: #ff7300;
 }
