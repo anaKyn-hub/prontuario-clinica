@@ -20,38 +20,34 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-<<<<<<< HEAD
 
     width: 70%;
-=======
     
 
     width: 100%;
->>>>>>> 07fc0203883336536ae7954b6d85f9560d93db13
+    
     height: 100vh;
+
 }
 
 header {
-<<<<<<< HEAD
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-=======
+
     margin: 0 0 0 4%;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     
->>>>>>> 07fc0203883336536ae7954b6d85f9560d93db13
 }
 
 #logo1 {
     box-sizing: border-box;
     width: 210px;
     height: 60px;
-<<<<<<< HEAD
-=======
 }
 
 main {
@@ -153,5 +149,5 @@ form {
 
 .botao-cancelar:hover {
     background-color: #f5f5f5;
->>>>>>> 07fc0203883336536ae7954b6d85f9560d93db13
+
 }
