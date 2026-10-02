@@ -125,6 +125,8 @@ form {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin-bottom: 9px;
+    
 }
 
 .agrup_campo label {
@@ -147,18 +149,22 @@ form {
     padding: 2px;
 }
 
-.agrup_campo input {
-    border-radius: 4px;
-    border-style: solid;
-    border: 1px solid #b1bdc8;
-    padding: 2%;
-}
+
 
 .agrup_campo input:hover {
     border-radius: 4px;
     border-style: solid;
     border: 1px solid #555d64;
+    
 }
+
+/*.agrup_campo input {
+
+    border-radius: 4px;
+    border-style: solid;
+    border: 1px solid #b1bdc8;
+    padding: 2%;
+}*/
 
 .campo {
     background-color: transparent;
@@ -168,6 +174,12 @@ form {
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 200;
+
+    border-radius: 4px;
+    border-style: solid;
+    border: 1px solid #b1bdc8;
+    padding: 2%;
+
 }
 
 #cadastrar {
@@ -223,6 +235,12 @@ form {
 
 .radio a:hover {
     color: #145eab;
+}
+
+
+.erro{
+    font-size: smaller;
+    text-decoration: red;
 }
 
 @media (max-width: 650px) {

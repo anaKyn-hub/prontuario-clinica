@@ -6,7 +6,9 @@ const API_URL = "http://localhost:3000";
 
 const email = document.getElementById("EMAIL").value;
 const senha = document.getElementById("SENHA").value;
-const botao = document.getElementById("BATAO").value;
+const botao = document.getElementById("BOTAO").value;
+
+
 
 
 
