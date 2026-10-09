@@ -15,6 +15,7 @@
 }
 
 .container .home-menu{
+    width: 100%;
     display: flex;
 }
 
@@ -23,10 +24,17 @@
     display: flex;
 }
 
+#content-core {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
 .mySidenav {
     height: 100vh;
-    width: 0;
-    background-color: #ffffff;
+    width: 10vw;
+    background-color: #fff3e5;
     overflow-x: hidden;
     transition: 0.5s;
     display: flex;
@@ -83,7 +91,7 @@
 .mySidenav .menu p {
     padding: 12px 8px 8px 5%;
     text-decoration: none;
-    font-size: 2.3vh;
+    font-size: 1.7vh;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -94,7 +102,7 @@
 .mySidenav .menu a {
     padding: 8px 8px 8px 10%;
     text-decoration: none;
-    font-size: 2.3vh;
+    font-size: 1.7vh;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -112,13 +120,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding-bottom: 1.7vh;
 }
 
 .mySidenav .config a{
     width:100%;
     padding: 8px 8px 8px 10%;
     text-decoration: none;
-    font-size: 2.3vh;
+    font-size: 1.7vh;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -192,7 +201,9 @@
     display: flex;
     align-items: center;
     width: 100%;
-    height: 8vh;
+    height: 6vh;
+    border-bottom: 1px solid #FF8400;
+    box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.2);
 }
 
 .perfil .esquerda{
@@ -209,7 +220,7 @@
 }
 
 #barra-menu {
-    width: 5vh;
+    width: 4vh;
     cursor:pointer;
     margin: 4%;
 }
@@ -220,7 +231,7 @@
     justify-content: end;
     width: 100%;
     height: 100%;
-    font-size: 2.3vh;
+    font-size: 1.7vh;
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -228,7 +239,7 @@
 
 .direita .logo-perfil{
     width: auto;
-    height: 70%;
+    height: 60%;
     margin-left: 2%;
     margin-right: 4%;
 }
@@ -246,10 +257,11 @@
 .container footer{
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     width: 100%;    
-    height: 25vh;
+    height: 8vh;
+    padding: 2%     ;
 }
 
 footer .termos{
@@ -263,13 +275,13 @@ footer .termos{
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2.5vh;
+    font-size: 1.7vh;
     color: #000000;
     text-decoration: none;
     margin: 2%;
 }
 
 footer img{
-    width: 60%;    
+    width: 20%;    
     height: auto;
 }
