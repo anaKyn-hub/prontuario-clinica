@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+}
+
+.container .home-menu{
+    width: 100%;
+    display: flex;
+}
+
+.container header{
+    height: 100vh;
+    display: flex;
+}
+
+#content-core {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.mySidenav {
+    height: 100vh;
+    width: 10vw;
+    background-color: #fff3e5;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.mySidenav .closebtn {
+    width: 100%;
+    height: 6.5vh;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.mySidenav .closebtn a {
+    padding: 8px 8px 8px 10%;
+    text-decoration: none;
+    font-size: 2.3vh;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    display: block;
+}
+  
+.mySidenav .closebtn a:hover {
+    background-color: #FF8400;
+    border-radius: 0px 50px 0px 50px;
+    color: #ffffff;
+}
+
+.mySidenav .closebtn #closebtn {
+    color: #FF8400;
+    position: relative;
+    font-size: 5vh;
+    margin-right: 2%;
+    transition: 0.5s;
+}
+
+.mySidenav #closebtn:hover{
+    background-color: #ffffff00;
+}
+
+.mySidenav .menu{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mySidenav .menu #tela_inicial {
+    padding: 8px 8px 8px 5%;
+}
+
+.mySidenav .menu p {
+    padding: 12px 8px 8px 5%;
+    text-decoration: none;
+    font-size: 1.7vh;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FF8400;
+    display: block;
+}
+  
+.mySidenav .menu a {
+    padding: 8px 8px 8px 10%;
+    text-decoration: none;
+    font-size: 1.7vh;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    display: block;
+}
+  
+.mySidenav .menu a:hover {
+    background-color: #FF8400;
+    border-radius: 0px 50px 0px 50px;
+    color: #ffffff;
+}
+
+.mySidenav .config {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1.7vh;
+}
+
+.mySidenav .config a{
+    width:100%;
+    padding: 8px 8px 8px 10%;
+    text-decoration: none;
+    font-size: 1.7vh;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #000000;
+    display: block;
+}
+
+.mySidenav .config a:hover {
+    background-color: #FF8400;
+    border-radius: 0px 50px 0px 50px;
+    color: #ffffff;
+}
+
+.mySidenav .menu .active{
+    background-color: #FF8400;
+    border-radius: 0px 50px 0px 50px;
+    color: #ffffff;
+}
+
+.mySidenav-icone{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 4vw;
+    background-color: #FF8400;
+    transition: 0.5s;
+}
+    
+.mySidenav-icone .groupo-icon{
+    height: 100%;
+    width: 4vh;
+    background-color: #0077ff;
+}
+
+.mySidenav-icone a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 6vh;
+    margin: 15% 0;
+}
+
+.mySidenav-icone .icone{
+    fill: #ffffff;
+    width: 45%;
+}
+
+
+.mySidenav-icone .config-icon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.container main{
+    width: 100%;
+}
+
+.container main .home{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.perfil {
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 6vh;
+    border-bottom: 1px solid #FF8400;
+    box-shadow: 0 5px 4px -4px rgba(0, 0, 0, 0.2);
+}
+
+.perfil .esquerda{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+.esquerda .logo-fam{
+    width: auto;
+    height: 65%;
+    margin: 10px;
+}
+
+#barra-menu {
+    width: 4vh;
+    cursor:pointer;
+    margin: 4%;
+}
+
+.perfil .direita{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    font-size: 1.7vh;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.direita .logo-perfil{
+    width: auto;
+    height: 60%;
+    margin-left: 2%;
+    margin-right: 4%;
+}
+
+.container .home section{   
+    width: 100%;
+    height: 100%;
+}
+
+.container section iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.container footer{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;    
+    height: 8vh;
+    padding: 2%     ;
+}
+
+footer .termos{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.termos a{
+    white-space: nowrap;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.7vh;
+    color: #000000;
+    text-decoration: none;
+    margin: 2%;
+}
+
+footer img{
+    width: 20%;    
+    height: auto;
+}
