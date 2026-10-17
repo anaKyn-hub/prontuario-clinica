@@ -6,7 +6,7 @@
 
 .container-paciente {
     width: 100%;
-    margin: 0px 15px 0px 15px;
+    margin: 0px 15px 40px 15px;    
 }
 
 
@@ -22,9 +22,7 @@ h2 {
     border-radius: 5px;
     border:  1px solid gray;
     padding: 10px;
-    display: flex;
-    
-    
+    display: flex;    
 }
 
 #descricao-paciente img{
@@ -44,9 +42,11 @@ p{
 }
 
 #botoes{
-    justify-content: center;
-    align-items: center;
-    margin: 10px 10px 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+    /*margin: 10px 10px 10px 30px;*/
+    margin: 10px 10% 10px 10%;
 }
 
 #botoes button{
@@ -57,14 +57,15 @@ p{
     background-color: #007FFF;
     border: 1px rgb(67, 67, 67) solid;
     color: rgba(255, 255, 255, 0.822);
-    border-radius: 3px 40px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
     padding: 10px;
-    margin: 0px 10px 0px 0px;
+    margin: 0px 10px 0px 10px;  
     font-weight: 400;
 }
 
 #detalhes-documento{
-    width: 98%;
+    width: 100%;
     border:  1px solid gray;
-    border-radius: 5px;
+    border-radius: 5px;   
+    height: 500px;
 }
