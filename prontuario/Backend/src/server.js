@@ -1,16 +1,8 @@
 
-
 const API_URL = "http://localhost:3000";
-
-
-
 const email = document.getElementById("EMAIL").value;
 const senha = document.getElementById("SENHA").value;
 const botao = document.getElementById("BOTAO").value;
-
-
-
-
 
 // -----------------------------------------------------------------
 // Exemplo 2: Login (POST "/login") usando um formulário
@@ -43,8 +35,6 @@ async function fazerLogin(EMAIL, SENHA) {
     mensagemDiv.style.color = "red";
   }
 }
-
-
 
 // -----------------------------------------------------------------
 // Disparando as funções quando a página carregar
