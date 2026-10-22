@@ -1,2 +1,3 @@
-prontuario/Backend/.env
-prontuario/Backend/src/server.js
+prontuario/backend/.env
+# prontuario/backend/src/server.js
+prontuario/backend/node_modules
