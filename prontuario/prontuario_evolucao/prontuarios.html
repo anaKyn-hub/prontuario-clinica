@@ -53,14 +53,37 @@
                 <div class="container-paciente">
                         <h2>Resumo</h2>
                         <div id="descricao-paciente">
-                            <img src="src/papoi.png" alt="foto-paciente">
-                            <div class="informacoes"> <!--Vai virar JS-->
-                                <h3>Michele Oliveira Parkignson</h3>
-                                <p>Idade: 67 anos, 67 dias</p>
-                                <p>Atendimentos: 167</p>
-                                <p>Primeira consulta: 15/10/1967</p>
-                                <p>Faltas: 67</p>
+                            <div class="frames-info" id="frame1">
+                                <img src="src/user.png" alt="foto-paciente">
+                                <div class="informacoes"> <!--Vai virar JS-->
+                                    <h3>Michele Oliveira Parkignson</h3>
+                                    <p>Idade: 67 anos</p>
+                                    <p>Atendimentos: 167</p>
+                                    <p>Primeira consulta: 15/10/1980</p>
+                                    <p>Faltas: 20</p>
+                                </div>
                             </div>
+
+                            <div class="frames-info" id="frame2">
+                                <div class="informacoes"> <!--Vai virar JS-->
+                                    <h3>Michele Oliveira Parkignson</h3>
+                                    <p>Idade: 67 anos</p>
+                                    <p>Atendimentos: 167</p>
+                                    <p>Primeira consulta: 15/10/1980</p>
+                                    <p>Faltas: 20</p>
+                                </div>
+                            </div>
+
+                            <div class="frames-info" id="frame3">
+                                <div class="informacoes"> <!--Vai virar JS-->
+                                    <h3>Michele Oliveira Parkignson</h3>
+                                    <p>Idade: 67 anos</p>
+                                    <p>Atendimentos: 167</p>
+                                    <p>Primeira consulta: 15/10/1980</p>
+                                    <p>Faltas: 20</p>
+                                </div>
+                            </div>
+                            
                         </div>
                         <div id="botoes">
                             <button>Ficha de Atendimento</button>
@@ -70,7 +93,40 @@
                             <button>Contrato</button>
                         </div>
                         <div id="detalhes-documento">
-                            <p>a</p>
+                            <table id="table-doc">
+                                <thead>
+                                    <tr class="table-content">
+                                        <th>Nome</th>
+                                        <th>Data de Criação</th>
+                                        <th>Última Alteração</th>
+                                        <th>Alterado Por</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-content">
+                                        <td>Anamnese 1</td>
+                                        <td>2026-10-05</td>
+                                        <td>2026-10-21</td>
+                                        <td>André</td>
+                                        <td>Não Enviado</td>
+                                    </tr>
+                                    <tr class="table-content">
+                                        <td>Anamnese 2</td>
+                                        <td>2026-10-05</td>
+                                        <td>2026-10-21</td>
+                                        <td>André</td>
+                                        <td>Aprovado</td>
+                                    </tr>
+                                    <tr class="table-content">
+                                        <td>Anamnese 3</td>
+                                        <td>2026-10-05</td>
+                                        <td>2026-10-21</td>
+                                        <td>André</td>
+                                        <td>Em Correção</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 <footer>

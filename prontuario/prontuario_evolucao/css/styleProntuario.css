@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -7,28 +9,38 @@
 .container-paciente {
     width: 100%;
     margin: 0px 15px 40px 15px;    
+
+    font-size: 1.3vh;
+    font-family: "Inter", sans-serif;
 }
-
-
 
 h2 {
     font-family: "Inter", sans-serif;
     font-size: 2.5vh;
     color: #FF8400;
-    margin: 10px;
+    margin: 10px 10px 10px 0px;
 }
 
 #descricao-paciente {
-    border-radius: 5px;
-    border:  1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+}
+
+.frames-info {
+    border-radius: 8px;  
+    background-color: white;
     padding: 10px;
-    display: flex;    
+    display: flex;
+    justify-content: center;
+    width: 30%;
 }
 
 #descricao-paciente img{
-    border-radius: 100%;
-    width: 100px;
-    margin-right: 25px;
+    width: 120px; /*arrumar o px*/
+    height: 120px; /*arrumar o px*/
+    margin-right: 10px; /*arrumar o px*/
 }
 
 h3{
@@ -65,7 +77,32 @@ p{
 
 #detalhes-documento{
     width: 100%;
-    border:  1px solid gray;
-    border-radius: 5px;   
+    border-radius: 8px;  
+    background-color: white; 
     height: 500px;
+    padding-top: 0.5vh;
+}
+
+#table-doc {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table-content th, td{
+    border-bottom: 1px #ffd8ab solid;
+    text-align: left;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.table-content th{
+    color: #FF8400;
+    padding-bottom: 0.8rem;
+}
+
+/*td:first-child {
+    text-align: left;
+}*/
+
+tbody tr:nth-child(odd) {
+  background-color: #fff3e5;
 }
