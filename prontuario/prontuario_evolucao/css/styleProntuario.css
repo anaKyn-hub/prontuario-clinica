@@ -73,6 +73,12 @@ p{
     padding: 10px;
     margin: 0px 10px 0px 10px;  
     font-weight: 400;
+    cursor: pointer;
+    transition: all 0.2s ease
+}
+
+#botoes button:hover {
+    background-color: #07386c;
 }
 
 #detalhes-documento{
