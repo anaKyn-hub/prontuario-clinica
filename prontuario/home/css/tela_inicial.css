@@ -6,8 +6,15 @@
     box-sizing: border-box;
 }
 
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
 .container {
     background-color: #f5f5f5;
+    height: 100vh;
+    display: flex;
 }
 
 header {
@@ -18,10 +25,12 @@ header {
     width: 12vw;
     background-color: #fff3e5;
     transition: 0.5s;
+    height: 92vh;
 
     display: none;
     flex-direction: column;
-    justify-content: flex-start;    
+    justify-content: flex-start;  
+      
 }
 
 #sideNav .closebtn {
@@ -112,6 +121,11 @@ header {
     color: #ffffff;
 }
 
+#corpo{
+    display: flex;
+    flex-direction: column;
+}
+
 #topNav{
     width: 100%;
     display: flex;
@@ -166,16 +180,22 @@ header {
     margin-left: 1vw;
 }
 
-main {
+#main {
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    width: 100%;
+    width: 100vw;
+    height: 86vh;
+    background-color: green;
+}
+
+.home {
+    
 }
 
 .container .home section{   
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 86vh;
 }
 
 .container section iframe{
