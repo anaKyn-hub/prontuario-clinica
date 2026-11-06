@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* ------ Geral ------ */
 *{
     margin: 0;
     padding: 0;
@@ -11,28 +12,29 @@
 }
 
 #content-core {
-    padding: 0px 15px 15px 15px;
+    padding: 0 1% 1% 1%;
     height: 100%;
 }
 
 .container-paciente {
     width: 100%;
-
-    font-size: 1.3vh;
+    height: 100%;
+    font-size: 0.8rem;
     font-family: "Inter", sans-serif;
 }
+
+/* ------ Quadros de Info ------ */
 
 h2 {
     font-family: "Inter", sans-serif;
     font-size: 2.5vh;
     color: #FF8400;
-    margin: 10px 10px 10px 0px;
+    padding: 10px 10px 10px 0px;
 }
 
 #descricao-paciente {
     display: flex;
     justify-content: space-between;
-    padding: 5px;
     width: 100%;
 }
 
@@ -61,40 +63,89 @@ p{
     font-size: 2vh;
 }
 
+/* ------ Botões ------ */
+
 #botoes{
     display: flex;
-    justify-content: space-between;
-    align-items: center;    
-    /*margin: 10px 10px 10px 30px;*/
-    margin: 10px 10% 10px 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 0.7% 0 0.7%;
+    width: 100%;
 }
 
 #botoes button{
     font-family: "Inter", sans-serif;
-    font-size: 15px; 
-    width: 213px;
-    height: 50px;
-    background-color: #007FFF;
-    border: 1px rgb(67, 67, 67) solid;
-    color: rgba(255, 255, 255, 0.822);
-    border-radius: 3px 3px 3px 3px;
-    padding: 10px;
-    margin: 0px 10px 0px 10px;  
-    font-weight: 400;
+    width: 20rem;
+    height: 5vh;
+    white-space: nowrap;
+    background-color: #7bbdff;
+    border-top: 1px #007FFF solid;
+    border-right: 1px #007FFF solid;
+    border-left: 1px #007FFF solid;
+    border-bottom: 0px #007FFF solid;
+    color: #007FFF;
+    border-radius: 5px 30px 0 0;
+    padding: 10px;  
+    font-weight: 500;
     cursor: pointer;
-    transition: all 0.2s ease
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 #botoes button:hover {
     background-color: #07386c;
 }
 
+#botoes button:nth-child(2){
+    background-color: #07386c;
+}
+
+/* ------ Icones dos botões ------ */
+#botoes button #icon-ficha {
+    padding: 0.1rem 0.3rem 0 0;
+    width: 100%;
+    height: 2.5rem; 
+}
+
+#botoes button #icon-contrato {
+    padding: 0.2rem 0.3rem 0.2rem 0;
+    width: 100%;
+    height: 3rem;
+}
+
+#botoes button #icon-evolucao {
+    padding: 0 0.3rem 0 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+#botoes button #icon-laudos {
+    padding: 0.1rem 0.3rem 0 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+#botoes button #icon-relatorios {
+    padding: 0.1rem 0.3rem 0 0;
+    width: 100%;
+    height: 2.5rem;
+}
+
+/* ------ Documentos ------ */
+
 #detalhes-documento{
     width: 100%;
-    border-radius: 8px;  
-    background-color: white; 
-    height: 500px;
-    padding-top: 0.5vh;
+    border-radius: 15px;  
+    background-color: white;
+    padding: 5px;
+    height: 68%;
+    border: 5px #07386c solid;
+}
+
+#table-total {
+    overflow-y: auto;
 }
 
 #table-doc {
@@ -111,6 +162,7 @@ p{
 .table-content th{
     color: #FF8400;
     padding-bottom: 0.8rem;
+    background-color: white;
 }
 
 /*td:first-child {
@@ -119,4 +171,12 @@ p{
 
 tbody tr:nth-child(odd) {
   background-color: #fff3e5;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+footer {
+    background-color: white;
 }
