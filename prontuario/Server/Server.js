@@ -10,11 +10,6 @@ const botao = document.getElementById("BOTAO").value;
 
 
 
-
-
-// -----------------------------------------------------------------
-// Exemplo 2: Login (POST "/login") usando um formulário
-// -----------------------------------------------------------------
 async function fazerLogin(EMAIL, SENHA) {
   const mensagemDiv = document.getElementById("mensagem-login"); 
 
@@ -46,9 +41,6 @@ async function fazerLogin(EMAIL, SENHA) {
 
 
 
-// -----------------------------------------------------------------
-// Disparando as funções quando a página carregar
-// -----------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", () => {
   listarAlunos();
 

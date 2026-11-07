@@ -1,6 +1,10 @@
+// Importar aqui o Meetodo Criado no Server Global para Salvar Daddos d
+
+
 const API_URL = "http://localhost:3002";
 
 document.addEventListener("DOMContentLoaded", () => {
+    
 
     const botao = document.getElementById("BOTAO");
 
@@ -52,6 +56,9 @@ async function fazerLogin(email, senha) {
             `Bem-vindo, ${dados.nome}!`;
 
         mensagemDiv.style.color = "green";
+
+        // Colocar aqui o metodo Salvar_Dados(dados, dados ......)
+
 
         setTimeout(() => {
 
