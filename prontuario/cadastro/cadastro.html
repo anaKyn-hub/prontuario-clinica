@@ -19,16 +19,21 @@
                 <p id="descricao">Preencha seus dados para realizar o cadastro em nossa plataforma.</p>
             </div>
 
-            <form id="formCadastro">
 
+
+
+            <form action="../login/index.html">
                 <div class="agrup_campo">
-                  <label for="fname">
+                    <label for="fname">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icones" viewBox="0 0 24 24" width="512" height="512"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/></svg>
                         Nome
                     </label>
                     <input class="campo" type="text" id="fname" name="fname">
-                    <p class="erro" id="Erronome">Numero maximo de caracteres atingido</p>
+                    <p class="erro" > Numero maximo de caracteres atingido </p>
                 </div>
+
+
+
 
                 <div class="agrup_campo">
                     <label for="lname">
@@ -36,7 +41,6 @@
                         Sobrenome
                     </label>
                     <input class="campo" type="text" id="lname" name="lname">
-                    <p class="erro" id="Errosobrenome">Numero maximo de caracteres atingido</p>
                 </div>
 
                 <div class="agrup_campo">
@@ -46,7 +50,6 @@
                         <span class="asterisco">*</span>
                     </label>
                     <input class="campo" type="text" id="ra" name="ra" required>
-                    <p class="erro" id="Errora">Numero maximo de caracteres atingido</p>
                 </div>
 
                 <div class="agrup_campo">
@@ -55,8 +58,7 @@
                         E-mail
                         <span class="asterisco">*</span>
                     </label>
-                    <input class="campo" type="email" id="email" name="email" required placeholder="example@email.com">
-                    <p class="erro" id="Erroemail">Numero maximo de caracteres atingido</p>
+                    <input  class="campo" type="email" id="email" name="email" required placeholder="example@email.com">
                 </div>
 
                 <div class="agrup_campo">
@@ -64,8 +66,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="icones" viewBox="0 0 24 24" width="512" height="512"><path d="M15,0H9A5.006,5.006,0,0,0,4,5V19a5.006,5.006,0,0,0,5,5h6a5.006,5.006,0,0,0,5-5V5A5.006,5.006,0,0,0,15,0ZM9,2h6a3,3,0,0,1,3,3V16H6V5A3,3,0,0,1,9,2Zm6,20H9a3,3,0,0,1-3-3V18H18v1A3,3,0,0,1,15,22Z"/><circle cx="12" cy="20" r="1"/></svg>
                         Telefone
                     </label>
-                    <input class="campo" type="text" id="telefone" name="telefone" placeholder="DDD Telefone">
-                    <p class="erro" id="Errotelefone">Numero maximo de caracteres atingido</p>
+                    <input  class="campo" type="text" id="telefone" name="telefone" placeholder="DDD Telefone">
                 </div>
 
                 <div class="agrup_campo">
@@ -74,10 +75,9 @@
                         Senha
                         <span class="asterisco">*</span>
                     </label>
-                    <input class="campo" type="password" id="password" name="password" required>
-                    <p class="erro" id="Errosenha">Numero maximo de caracteres atingido</p>
+                    <input  class="campo" type="password" id="password" name="password" required>
                 </div>
-
+                
                 <div class="agrup_campo">
                     <label for="confPassword">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icones" viewBox="0 0 24 24" width="512" height="512"><path d="M19,8.424V7A7,7,0,0,0,5,7V8.424A5,5,0,0,0,2,13v6a5.006,5.006,0,0,0,5,5H17a5.006,5.006,0,0,0,5-5V13A5,5,0,0,0,19,8.424ZM7,7A5,5,0,0,1,17,7V8H7ZM20,19a3,3,0,0,1-3,3H7a3,3,0,0,1-3-3V13a3,3,0,0,1,3-3H17a3,3,0,0,1,3,3Z"/><path d="M12,14a1,1,0,0,0-1,1v2a1,1,0,0,0,2,0V15A1,1,0,0,0,12,14Z"/></svg>
@@ -85,7 +85,6 @@
                         <span class="asterisco">*</span>
                     </label>
                     <input class="campo" type="password" id="confPassword" name="confPassword" required>
-                    <p class="erro" id="Erroconfsenha">As senhas nao coincidem</p>
                 </div>
 
                 <div class="radio">
@@ -101,9 +100,9 @@
                         
                     </div>
 
-                    <input id="cadastrar" type="submit" value="Cadastrar">
-                </form>
-            </main>
-        </div>
-    </body>
+                <input id="cadastrar" type="submit" value="Cadastrar">
+            </form>
+        </main>
+    </div>
+</body>
 </html>

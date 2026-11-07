@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
@@ -15,29 +16,34 @@
 }
 
 body {
+    /*background-color:rgb(9, 255, 0) ;*/
+
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
 }
 
-.corpo {
+.corpo { 
+    /*background-color:aqua;*/
+
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 
     width: 70%;
-    min-height: 100vh;
+    height: 100vh;
 }
 
 header {
+    /*background-color:blueviolet;*/
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-    flex-shrink: 0;
 
     width: 90%;
     height: 20vh;
-    min-height: 120px;
     padding: 5px;
 
     border-bottom: 1px solid #b1bdc8;
@@ -56,21 +62,26 @@ header {
 }
 
 main {
+    /*background-color:brown;*/
+
     box-sizing: border-box;
     width: 90%;
+    height: 88vh;
     padding-bottom: 3%;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
     margin-top: 1%;
 }
 
 #titulo {
+    /*background-color: rgb(243, 247, 6);*/
+
     width: 90%;
-    padding: 2% 0;
+    height: 12vh;
 
     display: flex;
     flex-direction: column;
@@ -78,7 +89,7 @@ main {
     align-items: center;
 }
 
-#titulo h1 {
+#titulo h1{
     font-size: 2.5rem;
     font-weight: 400;
     text-align: center;
@@ -92,29 +103,35 @@ main {
 }
 
 form {
+    /*background-color: rgb(255, 195, 205);*/
     box-sizing: border-box;
 
     width: 90%;
+    height: 88vh;
+
     padding: 1%;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
 }
 
-.agrup_campo {
+.agrup_campo{
+    /*background-color:rgb(184, 195, 255);*/
     width: 80%;
+    height: 10%;
 
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     margin-bottom: 9px;
+    
 }
 
 .agrup_campo label {
     display: flex;
     align-items: center;
-    margin-bottom: 4px;
 }
 
 .asterisco {
@@ -132,17 +149,28 @@ form {
     padding: 2px;
 }
 
+
+
 .agrup_campo input:hover {
     border-radius: 4px;
     border-style: solid;
     border: 1px solid #555d64;
+    
 }
+
+/*.agrup_campo input {
+
+    border-radius: 4px;
+    border-style: solid;
+    border: 1px solid #b1bdc8;
+    padding: 2%;
+}*/
 
 .campo {
     background-color: transparent;
 
     width: 100%;
-    height: 45px;
+    height: 60%;
     box-sizing: border-box;
     font-size: 16px;
     font-weight: 200;
@@ -150,35 +178,20 @@ form {
     border-radius: 4px;
     border-style: solid;
     border: 1px solid #b1bdc8;
-    padding: 0 12px;
-}
+    padding: 2%;
 
-/* Mensagem de erro: reserva sempre o espaço de 1 linha */
-.erro {
-    min-height: 1.2em;
-    margin-top: 3px;
-    font-size: smaller;
-    color: red;
-    display: none;
-}
-
-/* Opcional: esconde a mensagem sem mexer no layout */
-.erro.oculto {
-    visibility: hidden;
 }
 
 #cadastrar {
-    background-color: #145eab;
-
+    background-color:  #145eab;
+    
     font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: medium;
     color: #ffffff;
 
     width: 15vw;
-    min-width: 140px;
     height: 5vh;
-    min-height: 40px;
 
     border-radius: 5px;
     border: none;
@@ -192,17 +205,23 @@ form {
 
 .radio {
     box-sizing: border-box;
+    /*background-color:rgb(88, 148, 125);*/
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     text-align: start;
 
     width: 80%;
+    height: 6%;
     margin-top: 2%;
 }
 
 .termo {
     box-sizing: border-box;
+
     width: 100%;
+    height: 60%;
+
     font-size: 1rem;
 }
 
@@ -218,12 +237,24 @@ form {
     color: #145eab;
 }
 
-@media (max-width: 650px) {
-    * {
-        font-size: small;
-    }
 
-    .corpo {
-        width: 98%;
-    }
+.erro{
+    font-size: smaller;
+    text-decoration: red;
+}
+
+@media (max-width: 650px) {
+  * {
+    font-size: small;
+  }
+
+  .corpo {
+    width: 98%;
+  }
+}
+
+@media (max-height: 700px) {
+  body {
+    overflow-y: scroll;
+  }
 }

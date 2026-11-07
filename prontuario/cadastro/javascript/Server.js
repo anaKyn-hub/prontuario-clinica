@@ -1,57 +1,30 @@
 const API_URL = "http://localhost:3002";
 
 document.addEventListener("DOMContentLoaded", () => {
-    console.log('oi')
 
     const botao = document.getElementById("cadastrar");
 
     botao.addEventListener("click", () => {
-
-
-        // Valor dos campos do Usuario 
+        
         const nome = document.getElementById("fname").value;
         const sobrenome = document.getElementById("lname").value;
         const ra = document.getElementById("ra").value;
         const email = document.getElementById("email").value;
         const telefone = document.getElementById("telefone").value;
-        const senha = document.getElementById("password").value;
+        const senha = document.getElementById("Senha").value;
         const confirmarSenha = document.getElementById("confPassword").value;
 
-        // Mensagens de erro 
-        const Erronome = document.getElementById("Erronome");
-        const Errosobrenome = document.getElementById("Errosobrenome");
-        const Errora = document.getElementById("Errora");
-        const Erroemail = document.getElementById("Erroemail");
-        const Errotelefone = document.getElementById("Errotelefone");
-        const Errosenha = document.getElementById("Errosenha");
-        const Erroconfsenha = document.getElementById("Erroconfsenha");
-
-        Erronome.style.display = "none";
-        Errosobrenome.style.display = "none";
-        Errora.style.display = "none";
-        Erroemail.style.display = "none";
-        Errotelefone.style.display = "none";
-        Errosenha.style.display = "none";
-        Erroconfsenha.style.display = "none";
-
-        if (nome.length > 10) {
-            Erronome.style.display = "block";
-        } else if (sobrenome.length > 150) {
-            Errosobrenome.style.display = "block";
-        } else if (email.length > 100) {
-            Erroemail.style.display = "block";
-        } else if (ra.length > 10) {
-            Errora.style.display = "block";
-        } else if (telefone.length > 16) {
-            Errotelefone.style.display = "block";
-        } else if (senha.length > 20) {
-            Errosenha.style.display = "block";
-        } else if (senha !== confirmarSenha) {
-            Erroconfsenha.style.display = "block";
-        } else {
-          cadastrarAluno(nome, sobrenome, ra, email, telefone, senha);
-        }
-
+        if  ( (nome.lenght > 10) ) {
+            "novo invalido "
+        
+        }  
+        else if(sobrenome > 150) {"novo invalido " } 
+        else if(email.lenght > 100) {"novo invalido " } 
+        else if(ra.lenght > 10) {"novo invalido " } 
+        else if(telefone.lenght > 16) {"novo invalido " } 
+        else if(senha .lenght > 20) {"novo invalido " } 
+        else if(senha != confirmarSenha) {"novo invalido " } 
+        else cadastrarAluno(nome, sobrenome, ra, email, telefone, senha, confirmarSenha );
 
     });
 
