@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prontuários</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prontuários</title>
 
-    <link rel="icon" href="src/app.png" type="image/png">
-    <link rel="stylesheet" href="style/style.css">
-</head>
+        <link rel="icon" href="src/app.png" type="image/png">
+        <link rel="stylesheet" href="style/style.css">
+    </head>
 
-<body>
+    <body>
+        <main class="corpo">
+            <div class="container">
+                <div class="apresentaçao">
+                    <h2 class="titulo">Seja Bem vindo</h2>
+                    <p class="textim">Faça seu login e aproveite o site</p>
+                </div>
 
-    <main class="corpo">
+                <div class="campos">
+                    <form class="formulario">
+                        <div class="input-group">
+                            <img class="icon" src="../login/src/user.png" alt="">
+                            <input
+                                id="EMAIL"
+                                type="text"
+                                placeholder="usuario@email.com">
+                        </div>
 
-        <div class="container">
+                        <div class="input-group">
+                            <img class="icon" src="../login/src/lock.png" alt="">
+                            <input
+                                id="SENHA"
+                                type="password"
+                                placeholder="••••••••">
+                        </div>
 
-            <div class="apresentaçao">
-                <h2 class="titulo">Seja Bem vindo</h2>
-                <p class="textim">Faça seu login e aproveite o site</p>
-            </div>
+                        <a class="esqueci"
+                        href="../esqueci_senha/index.html">
+                            Esqueceu a Senha?
+                        </a>
 
-            <div class="campos">
+                        <button
+                            class="login"
+                            id="BOTAO"
+                            type="button">
+                            Entrar
+                        </button>
 
-                <form class="formulario">
+                        <div id="mensagem-login"></div>
 
-                    <div class="input-group">
-                        <img class="icon" src="../login/src/user.png" alt="">
-                        <input
-                            id="EMAIL"
-                            type="text"
-                            placeholder="usuario@email.com">
-                    </div>
+                    </form>
 
-                    <div class="input-group">
-                        <img class="icon" src="../login/src/lock.png" alt="">
-                        <input
-                            id="SENHA"
-                            type="password"
-                            placeholder="••••••••">
-                    </div>
+                </div>
 
-                    <a class="esqueci"
-                       href="../esqueci_senha/index.html">
-                        Esqueceu a Senha?
-                    </a>
-
+                <div class="esqueci">
                     <button
                         class="login"
-                        id="BOTAO"
-                        type="button">
-                        Entrar
+                        type="button"
+                        onclick="window.location.href='../cadastro/cadastro.html'">
+                        Cadastre-se
                     </button>
-
-                    <div id="mensagem-login"></div>
-
-                </form>
-
+                </div>
             </div>
+        </main>
 
-            <div class="esqueci">
-
-                <button
-                    class="login"
-                    type="button"
-                    onclick="window.location.href='../cadastro/cadastro.html'">
-
-                    Cadastre-se
-
-                </button>
-
-            </div>
-
-        </div>
-
-    </main>
-
-    <script src="script/script.js"></script>
-
-</body>
+        <script src="script/script.js"></script>
+    </body>
 </html>

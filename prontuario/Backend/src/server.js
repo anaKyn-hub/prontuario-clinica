@@ -1,15 +1,17 @@
 
-
 const API_URL = "http://localhost:3000";
-
-
-
 const email = document.getElementById("EMAIL").value;
 const senha = document.getElementById("SENHA").value;
 const botao = document.getElementById("BOTAO").value;
 
+<<<<<<< HEAD:prontuario/Server/Server.js
 
 
+=======
+// -----------------------------------------------------------------
+// Exemplo 2: Login (POST "/login") usando um formulário
+// -----------------------------------------------------------------
+>>>>>>> 5742901477be3b9abecedfc49299d66023a1408f:prontuario/Backend/src/server.js
 async function fazerLogin(EMAIL, SENHA) {
   const mensagemDiv = document.getElementById("mensagem-login"); 
 
@@ -39,8 +41,14 @@ async function fazerLogin(EMAIL, SENHA) {
   }
 }
 
+<<<<<<< HEAD:prontuario/Server/Server.js
 
 
+=======
+// -----------------------------------------------------------------
+// Disparando as funções quando a página carregar
+// -----------------------------------------------------------------
+>>>>>>> 5742901477be3b9abecedfc49299d66023a1408f:prontuario/Backend/src/server.js
 document.addEventListener("DOMContentLoaded", () => {
   listarAlunos();
 
