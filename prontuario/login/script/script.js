@@ -23,7 +23,7 @@ async function fazerLogin(email, senha) {
     try {
 
         const resposta = await fetch(
-            `${API_URL}/login`,
+            `${API_URL}/api/alunos/login`,
             {
                 method: "POST",
                 headers: {
@@ -41,7 +41,9 @@ async function fazerLogin(email, senha) {
         if (!resposta.ok) {
 
             mensagemDiv.textContent =
-                dados.erro || "USUARIO INATIVO";
+                dados.errors
+                    ? dados.errors.map((e) => e.msg).join(" ")
+                    : (dados.erro || "Não foi possível realizar o login.");
 
             mensagemDiv.style.color = "red";
 
@@ -49,14 +51,14 @@ async function fazerLogin(email, senha) {
         }
 
         mensagemDiv.textContent =
-            `Bem-vindo, ${dados.nome}!`;
+            `Bem-vindo, ${dados.aluno.nome}!`;
 
         mensagemDiv.style.color = "green";
 
         setTimeout(() => {
 
             window.location.href =
-                "../home/html/Home.html";
+                "../home/html/tela_inicial.html";
 
         }, 1000);
 
@@ -74,5 +76,3 @@ async function fazerLogin(email, senha) {
             "red";
     }
 }
-
-

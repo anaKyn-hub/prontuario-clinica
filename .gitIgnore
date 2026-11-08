@@ -1,3 +1,8 @@
+# Arquivos de variáveis de ambiente
 prontuario/backend/.env
-# prontuario/backend/src/server.js
-prontuario/backend/node_modules
+
+# Dependências do projeto
+prontuario/backend/node_modules/
+
+# arquivo com o ddl das tabelas
+prontuario/backend/dev_db.txt

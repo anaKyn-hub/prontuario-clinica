@@ -39,18 +39,22 @@ h2 {
 }
 
 .frames-info {
-    border-radius: 8px;  
+    border-radius: 8px;
     background-color: white;
     padding: 10px;
     display: flex;
     justify-content: center;
     width: 30%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-#descricao-paciente img{
-    width: 120px; /*arrumar o px*/
-    height: 120px; /*arrumar o px*/
-    margin-right: 10px; /*arrumar o px*/
+#frame1 h3{
+    color: rgb(3, 6, 74);
+}
+
+#frame1 p{
+    margin: 1rem;
+
 }
 
 h3{
@@ -73,18 +77,27 @@ p{
     width: 100%;
 }
 
+#botoes button:first-child{
+    margin: 0rem 0.5rem 0rem 0rem;
+    padding: 0rem;
+}
+
+#botoes button:last-child{
+    margin: 0rem 0rem 0rem 0.5rem;
+}
+
 #botoes button{
     font-family: "Inter", sans-serif;
     width: 20rem;
     height: 5vh;
     white-space: nowrap;
-    background-color: #7bbdff;
-    border-top: 1px #007FFF solid;
-    border-right: 1px #007FFF solid;
-    border-left: 1px #007FFF solid;
-    border-bottom: 0px #007FFF solid;
-    color: #007FFF;
-    border-radius: 5px 30px 0 0;
+    background-color: #fc811b;
+    border-top: 1px #fc811b solid;
+    border-right: 1px #fc811b solid;
+    border-left: 1px #fc811b solid;
+    border-bottom: 0px #fc811b solid;
+    color: #F2E4BB;
+    border-radius: 5px 30px 0px 0px;
     padding: 10px;  
     font-weight: 500;
     cursor: pointer;
@@ -92,45 +105,58 @@ p{
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin: 0rem 0.5rem 0rem 0.5rem;
 }
 
 #botoes button:hover {
     background-color: #07386c;
+    color:#ffffff;
+    border: 1px #fc811b;
 }
 
 #botoes button:nth-child(2){
     background-color: #07386c;
+    color: #ffffff;
+    border: #07386c;
 }
 
 /* ------ Icones dos botões ------ */
 #botoes button #icon-ficha {
-    padding: 0.1rem 0.3rem 0 0;
+    padding: 0.1rem 0.3rem 0 0.5rem;
     width: 100%;
-    height: 2.5rem; 
+    height: 2.2rem; 
 }
 
 #botoes button #icon-contrato {
     padding: 0.2rem 0.3rem 0.2rem 0;
     width: 100%;
-    height: 3rem;
+    height: 2.5rem;
+    
 }
 
 #botoes button #icon-evolucao {
     padding: 0 0.3rem 0 0;
     width: 100%;
-    height: 2.5rem;
+    height: 2.3rem;
 }
 
 #botoes button #icon-laudos {
     padding: 0.1rem 0.3rem 0 0;
     width: 100%;
-    height: 2.5rem;
+    height: 2rem;
+    color: white;
 }
 
 #botoes button #icon-relatorios {
     padding: 0.1rem 0.3rem 0 0;
     width: 100%;
-    height: 2.5rem;
+    height: 2rem;
+}
+
+#botoes button #icon-testes {
+    padding: 0.1rem 0.3rem 0 0;
+    width: 100%;
+    height: 2rem;
 }
 
 /* ------ Documentos ------ */
@@ -141,7 +167,7 @@ p{
     background-color: white;
     padding: 5px;
     height: 68%;
-    border: 5px #07386c solid;
+    border: 4px #07386c solid;
 }
 
 #table-total {
@@ -165,6 +191,11 @@ p{
     background-color: white;
 }
 
+#table-total .table-content:hover {
+    cursor: pointer;
+    background-color: #f8b75b;
+}
+
 /*td:first-child {
     text-align: left;
 }*/
@@ -176,6 +207,8 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
+
+
 
 footer {
     background-color: white;

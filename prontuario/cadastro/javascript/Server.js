@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Valor dos campos do Usuario
         const nome = document.getElementById("fname").value.trim();
-        const sobrenome = document.getElementById("lname").value.trim();
         const ra = document.getElementById("ra").value.trim();
         const email = document.getElementById("email").value.trim();
         const telefone = document.getElementById("telefone").value.trim();
@@ -18,7 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Mensagens de erro
         const Erronome = document.getElementById("Erronome");
-        const Errosobrenome = document.getElementById("Errosobrenome");
         const Errora = document.getElementById("Errora");
         const Erroemail = document.getElementById("Erroemail");
         const Errotelefone = document.getElementById("Errotelefone");
@@ -26,7 +24,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const Erroconfsenha = document.getElementById("Erroconfsenha");
 
         Erronome.style.display = "none";
-        Errosobrenome.style.display = "none";
         Errora.style.display = "none";
         Erroemail.style.display = "none";
         Errotelefone.style.display = "none";
@@ -35,8 +32,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (nome.length > 10) {
             Erronome.style.display = "block";
-        } else if (sobrenome.length > 150) {
-            Errosobrenome.style.display = "block";
         } else if (email.length > 100) {
             Erroemail.style.display = "block";
         } else if (ra.length > 10) {
@@ -48,36 +43,62 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (senha !== confirmarSenha) {
             Erroconfsenha.style.display = "block";
         } else {
-            cadastrarAluno(nome, sobrenome, ra, email, telefone, senha);
+            cadastrarAluno(nome, ra, email, telefone, senha);
         }
     });
 
 });
 
-async function cadastrarAluno(nome, sobrenome, ra, email, telefone, senha) {
-
-    const mensagemDiv = document.getElementById("mensagem-login");
+async function cadastrarAluno(nome, ra, email, telefone, senha) {
 
     try {
 
-        const resposta = await fetch(`${API_URL}/`, {
+    
+        const resposta = await fetch(`${API_URL}/api/alunos`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                registro: ra,
                 nome,
-                sobrenome,
+                ra,                                    
                 email,
-                telefone,
-                senha,
-                esta_ativo: 1
+                telefone: telefone.replace(/\D/g, ""),
+                senha
             })
         });
 
         const dados = await resposta.json();
 
+        
+        if (!resposta.ok) {
+
+            
+            const camposErro = {
+                nome: "Erronome",
+                ra: "Errora",
+                email: "Erroemail",
+                telefone: "Errotelefone",
+                senha: "Errosenha"
+            };
+
+        
+            if (dados.errors) {
+                dados.errors.forEach((e) => {
+                    const el = document.getElementById(camposErro[e.path]);
+                    if (el) {
+                        el.textContent = e.msg;
+                        el.style.display = "block";
+                    } else {
+                        alert(e.msg);
+                    }
+                });
+            } else {
+                alert(dados.erro || "Não foi possível realizar o cadastro.");
+            }
+
+            return;
+        }
 
         setTimeout(() => {
             window.location.href = "/prontuario/home/html/tela_inicial.html";
@@ -85,7 +106,6 @@ async function cadastrarAluno(nome, sobrenome, ra, email, telefone, senha) {
 
     } catch (erro) {
         console.error("Falha no cadastro:", erro);
-        mensagemDiv.textContent = "Erro de conexão com o servidor.";
-        mensagemDiv.style.color = "red";
+        alert("Erro de conexão com o servidor.");
     }
 }
