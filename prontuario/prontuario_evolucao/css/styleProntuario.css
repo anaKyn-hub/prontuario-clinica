@@ -39,18 +39,23 @@ h2 {
 }
 
 .frames-info {
-    border-radius: 8px;  
+    border-radius: 8px;
     background-color: white;
     padding: 10px;
     display: flex;
     justify-content: center;
     width: 30%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-#descricao-paciente img{
-    width: 120px; /*arrumar o px*/
-    height: 120px; /*arrumar o px*/
-    margin-right: 10px; /*arrumar o px*/
+#frame1 h3{
+    color: rgb(3, 6, 74);
+    text-align: ;
+}
+
+#frame1 p{
+    margin: 1rem;
+
 }
 
 h3{
@@ -144,6 +149,12 @@ p{
 }
 
 #botoes button #icon-relatorios {
+    padding: 0.1rem 0.3rem 0 0;
+    width: 100%;
+    height: 2rem;
+}
+
+#botoes button #icon-testes {
     padding: 0.1rem 0.3rem 0 0;
     width: 100%;
     height: 2rem;
