@@ -111,7 +111,9 @@ p{
 #botoes button:hover {
     background-color: #07386c;
     color:#ffffff;
-    border: 1px #fc811b;
+    border-top: 1px #07386c solid;
+    border-right: 1px #07386c solid;
+    border-left: 1px #07386c solid;
 }
 
 #botoes button:nth-child(2){
@@ -166,7 +168,7 @@ p{
     border-radius: 15px;  
     background-color: white;
     padding: 5px;
-    height: 68%;
+    height: 58%;
     border: 4px #07386c solid;
 }
 
@@ -208,8 +210,8 @@ tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
 
-
-
 footer {
     background-color: white;
+    position: fixed;
+    bottom: 0;
 }
