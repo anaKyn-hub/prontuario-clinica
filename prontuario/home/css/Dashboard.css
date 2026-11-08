@@ -7,8 +7,8 @@
 }
 .container{
     background-color: rgb(244, 243, 243);
-    width: 50vw;
-    height: 50vh;
+    width: 100%vw;
+    height: 100%vh;
     display: flex;
     flex-direction: column;
 }
@@ -23,8 +23,8 @@
 }
 
 .container .painel {
-    width: 50vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -42,8 +42,8 @@
 .painel .card-all{
     background-color: #007FFF;
     text-decoration: none;
-    height: 20vh;
-    width: 50%;
+    height: 30vh;
+    width: 100%;
     display: flex;
     align-content: start; 
     border-radius: 20px;
@@ -52,8 +52,8 @@
 }
 
 .painel .card-all:hover{
-    height: 240px;
-    width: 50vw;
+    height: 30vh;
+    width: 29vw;
     box-shadow: 5px 5px 8px #7a97b5;
     transition: 0.3s;
 }
