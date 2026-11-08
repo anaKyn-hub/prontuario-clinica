@@ -50,7 +50,6 @@ h2 {
 
 #frame1 h3{
     color: rgb(3, 6, 74);
-    text-align: ;
 }
 
 #frame1 p{
@@ -192,6 +191,11 @@ p{
     background-color: white;
 }
 
+#table-total .table-content:hover {
+    cursor: pointer;
+    background-color: #f8b75b;
+}
+
 /*td:first-child {
     text-align: left;
 }*/
@@ -204,10 +208,7 @@ tbody tr:nth-child(even) {
   background-color: #ffffff;
 }
 
-#table-total .table-content:hover {
-    cursor: pointer;
-    background-color: #f8b75b;
-}
+
 
 footer {
     background-color: white;
