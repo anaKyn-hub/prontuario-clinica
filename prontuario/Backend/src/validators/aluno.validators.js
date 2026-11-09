@@ -11,6 +11,28 @@ const getByIdAlunoValidator = [
         .trim()
         .isUUID()
         .withMessage('O ID do aluno deve ser um UUID válido.')
+        .bail()
+        .custom(async (id) => {
+
+            // Verifica se o id já existe no banco de dados
+            const [resultado] = await pool.query('SELECT id FROM aluno WHERE id = ?', [id]);
+
+            if (resultado.length <= 0) {
+                throw new Error('O id do aluno não está cadastrado.');
+            } 
+
+            return true;
+        })
+
+];
+
+const getPacientesByAlunoValidator = [
+
+    // Valida o ID do aluno recebido na rota
+    param('id')
+        .trim()
+        .isUUID()
+        .withMessage('O ID do aluno deve ser um UUID válido.')
 
 ];
 
@@ -24,7 +46,7 @@ const getByEmailAlunoValidator = [
 ]
 
 const getLoginAlunoValidator = [
-    body('email')
+    query('email')
         .notEmpty()
         .withMessage('O email do aluno é obrigatório.')
         .bail()
@@ -48,7 +70,7 @@ const getLoginAlunoValidator = [
             return true;
         }),
 
-        body('senha')
+    query('senha')
         .notEmpty()
         .withMessage('A senha do aluno é obrigatória.')
         .bail()
@@ -57,8 +79,8 @@ const getLoginAlunoValidator = [
         .withMessage('A senha do aluno deve ter entre 8 e 255 caracteres.'),
 
     checkExact([], {
-        locations: ['body'],
-        message: 'O corpo da requisição contém campos não permitidos.'
+        locations: ['query'],
+        message: 'A URL da requisição contém query strings não permitidas.'
     })
 ]
 
@@ -210,24 +232,6 @@ const putAlunoValidator = [
         .matches(/^[A-Za-zÀ-ÖØ-öø-ÿ\s]+$/)
         .withMessage('O nome do aluno deve conter apenas letras e espaços.'),
 
-    camposOpcionalValidator('ra')
-        .isLength({ min: 8, max: 10 })
-        .withMessage('O RA do aluno deve ter entre 8 e 10 caracteres.')
-        .bail()
-        .matches(/^[0-9]+$/)
-        .withMessage('O RA do aluno deve conter apenas números.')
-        .bail()
-        .custom(async (ra, { req }) => {
-
-            const [resultado] = await pool.query('SELECT ra FROM aluno WHERE ra = ? AND id <> ?', [ra, req.params.id]);
-
-            if (resultado.length > 0) {
-                throw new Error('O RA do aluno já está cadastrado.');
-            }
-
-            return true;
-        }),
-
     camposOpcionalValidator('email')
         .isLength({ min: 7, max: 255 })
         .withMessage('O email do aluno deve ter entre 7 e 255 caracteres.')
@@ -328,6 +332,24 @@ const putAlunoByAdminValidator = [
             return true;
         }),
 
+    camposOpcionalValidator('ra')
+        .isLength({ min: 8, max: 10 })
+        .withMessage('O RA do aluno deve ter entre 8 e 10 caracteres.')
+        .bail()
+        .matches(/^[0-9]+$/)
+        .withMessage('O RA do aluno deve conter apenas números.')
+        .bail()
+        .custom(async (ra, { req }) => {
+
+            const [resultado] = await pool.query('SELECT ra FROM aluno WHERE ra = ? AND id <> ?', [ra, req.params.id]);
+
+            if (resultado.length > 0) {
+                throw new Error('O RA do aluno já está cadastrado.');
+            }
+
+            return true;
+        }),
+
     camposOpcionalValidator('esta_ativo')
         .isBoolean()
         .withMessage('O campo esta_ativo deve ser um valor booleano.'),
@@ -345,4 +367,4 @@ const deleteAlunoValidator = [
         .withMessage('O ID do aluno deve ser um UUID válido.')
 ]
 
-module.exports = { getByEmailAlunoValidator, getByIdAlunoValidator, getLoginAlunoValidator, postAlunoValidator, putAlunoValidator, putAlunoByAdminValidator, putSenhaAlunoValidator, deleteAlunoValidator }; // Exporta os validadores para serem usados em outros arquivos, como o arquivo de rotas de alunos
+module.exports = { getByEmailAlunoValidator, getByIdAlunoValidator, getPacientesByAlunoValidator, getLoginAlunoValidator, postAlunoValidator, putAlunoValidator, putAlunoByAdminValidator, putSenhaAlunoValidator, deleteAlunoValidator }; // Exporta os validadores para serem usados em outros arquivos, como o arquivo de rotas de alunos

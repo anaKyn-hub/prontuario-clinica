@@ -15,13 +15,21 @@ routes.get(
     alunoController.getAllAlunos
 ); // Definindo a rota GET /alunos com validação de parâmetros e tratamento de erros
 
+
 routes.get(
     '/alunos/login',
-    functionUtils.bodyNaoVazio,
+    functionUtils.bodyVazio,
     alunoValidator.getLoginAlunoValidator,
     valideErros,
     alunoController.getLoginAluno
 ); // Definindo a rota GET /alunos/login com validação de parâmetros e tratamento de erros
+
+routes.get(
+    '/alunos/paciente/:id',
+    functionUtils.bodyVazio,
+    valideErros,
+    alunoController.getPacientesByAluno
+); // Definindo a rota GET /alunos com validação de parâmetros e tratamento de erros
 
 routes.get(
     '/alunos/email/:email',
@@ -54,7 +62,7 @@ routes.put(
     alunoValidator.putAlunoValidator,
     valideErros,
     alunoController.putAluno
-); // Definindo a rota PATCH /alunos/:id com validação de parâmetros e tratamento de erros
+); // Definindo a rota PUT /alunos/:id para o aluno atualizar seu registro
 
 routes.put(
     '/alunos/admin/:id',
@@ -62,7 +70,7 @@ routes.put(
     alunoValidator.putAlunoByAdminValidator,
     valideErros,
     alunoController.putAlunoByAdmin
-);
+); // Definindo a rota PUT /alunos/admin/:id para o administrador atualizar um aluno
 
 routes.put(
     '/alunos/:id/senha',
@@ -70,7 +78,7 @@ routes.put(
     alunoValidator.putSenhaAlunoValidator,
     valideErros,
     alunoController.putSenhaAlunos
-);
+); // Definindo a rota PUT /alunos/:id/senha para atualizar a senha sem estra logado
 
 routes.delete(
     '/alunos/admin/:id',
@@ -78,6 +86,6 @@ routes.delete(
     alunoValidator.deleteAlunoValidator,
     valideErros,
     alunoController.deleteAluno
-);
+); // Definindo a rota DELETE /alunos/admin/:id para deletar um aluno da tabela do banco de dados
 
 module.exports = routes; // Exportando o roteador para ser usado em outros arquivos, como o arquivo principal do servidor
