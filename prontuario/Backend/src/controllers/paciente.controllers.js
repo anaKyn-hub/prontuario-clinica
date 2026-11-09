@@ -2,7 +2,7 @@ const pool = require('../config/db.config'); // Importando o pool de conexões c
 const { randomUUID } = require ('crypto'); // Importando a função randomUUID do módulo crypto para gerar IDs únicos para os pacientes
 const matchedData = require('express-validator').matchedData; // Importando a função matchedData do express-validator para extrair os dados validados das requisições
 
-async function getAllpacientes(req, res) { // Função assíncrona para buscar todos os pacientes no banco de dados com paginação para deixar as consultas mais leves
+async function getAllPacientes(req, res) { // Função assíncrona para buscar todos os pacientes no banco de dados com paginação para deixar as consultas mais leves
     try {
         // Obtendo os parâmetros de paginação da query string da requisição, com valores padrão caso não sejam fornecidos
         const pagina = matchedData(req).pagina ?? 1; // Página atual (padrão: 1)
@@ -47,3 +47,5 @@ async function getAllpacientes(req, res) { // Função assíncrona para buscar t
         return res.status(500).json({ erro: 'Erro interno do servidor ao listar os pacientes.'});
     }
 };
+
+module.exports = { getAllPacientes };
