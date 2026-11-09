@@ -3,6 +3,7 @@ prontuario/backend/.env
 
 # Dependências do projeto
 prontuario/backend/node_modules/
+prontuario/node_modules/
 
 # arquivo com o ddl das tabelas
 prontuario/backend/dev_db.txt
