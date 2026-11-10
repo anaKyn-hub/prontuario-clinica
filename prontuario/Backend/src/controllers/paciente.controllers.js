@@ -48,4 +48,48 @@ async function getAllPacientes(req, res) { // Função assíncrona para buscar t
     }
 };
 
-module.exports = { getAllPacientes };
+async function getByIdPaciente(req, res) {
+     try {
+        const { id } = matchedData(req); // Obtendo o ID do paciente a partir dos parâmetros da requisição
+
+        const [resultado] = await pool.query('SELECT * FROM paciente WHERE id = ?', [id]); // Executando uma consulta SQL para buscar o paciente pelo ID
+
+        if (resultado.length === 0) { // Verificando se o paciente foi encontrado
+            return res.status(404).json({ erro: 'paciente não encontrado.' }); // Retornando uma resposta de erro caso o paciente não seja encontrado
+        }
+
+        const pacientes = resultado[0]; // Obtendo o paciente encontrado na consulta SQL
+
+        const { senha: _, ...pacienteSemSenha } = pacientes;
+
+        return res.status(200).json({ paciente: pacienteSemSenha }); // Retornando uma resposta de sucesso com os dados do paciente encontrado
+
+    } catch (error) {
+        console.error({erro: 'Erro ao buscar o paciente:', details: error.message}); // Registrando o erro no console para fins de depuração
+        return res.status(500).json({ erro: 'Erro interno do servidor ao buscar o paciente.'});
+    }
+};
+
+async function getByNumProntuarioPaciente(req, res) {
+     try {
+        const { num_prontuario } = matchedData(req); // Obtendo o num_prontuario do paciente a partir dos parâmetros da requisição
+
+        const [resultado] = await pool.query('SELECT * FROM paciente WHERE num_prontuario = ?', [num_prontuario]); // Executando uma consulta SQL para buscar o paciente pelo ID
+
+        if (resultado.length === 0) { // Verificando se o paciente foi encontrado
+            return res.status(404).json({ erro: 'paciente não encontrado.' }); // Retornando uma resposta de erro caso o paciente não seja encontrado
+        }
+
+        const pacientes = resultado[0]; // Obtendo o paciente encontrado na consulta SQL
+
+        const { senha: _, ...pacienteSemSenha } = pacientes;
+
+        return res.status(200).json({ paciente: pacienteSemSenha }); // Retornando uma resposta de sucesso com os dados do paciente encontrado
+
+    } catch (error) {
+        console.error({erro: 'Erro ao buscar o paciente:', details: error.message}); // Registrando o erro no console para fins de depuração
+        return res.status(500).json({ erro: 'Erro interno do servidor ao buscar o paciente.'});
+    }
+};
+
+module.exports = { getAllPacientes, getByIdPaciente, getByNumProntuarioPaciente };
