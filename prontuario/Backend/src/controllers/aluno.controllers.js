@@ -11,16 +11,18 @@ async function getAllAlunos(req, res) { // Função assíncrona para buscar todo
         // Consultando a quantidade total de alunos cadastros.
         const [totalAlunos] = await pool.query('SELECT COUNT(*) AS total FROM aluno'); // Executando uma consulta SQL para contar o total de alunos cadastrados
 
+        let ultimaPagina;
+
         if(totalAlunos[0].total !== 0) { // Verificando se não há alunos cadastrados
 
             // Calculando a última página conforme a quantidade total de alunos e o limite de registros por página
-            var ultimaPagina = Math.ceil(totalAlunos[0].total / limite);
+            ultimaPagina = Math.ceil(totalAlunos[0].total / limite);
         } else {
-            res.status(404).json({ erro: 'Nenhum aluno cadastrado.' }); // Retornando uma resposta de erro caso não haja alunos cadastrados
+            return res.status(404).json({ erro: 'Nenhum aluno cadastrado.' }); // Retornando uma resposta de erro caso não haja alunos cadastrados
         }
 
         if (pagina > ultimaPagina) { // Verificando se a página solicitada é maior que a última página disponível
-            res.status(404).json({ erro: 'Página não encontrada.' }); // Retornando uma resposta de erro caso a página solicitada não exista
+            return res.status(404).json({ erro: 'Página não encontrada.' }); // Retornando uma resposta de erro caso a página solicitada não exista
         }
 
         // Objeto de paginação para informar ao cliente sobre a quantidade total de alunos, a página atual, o limite de registros por página e a última página disponível
@@ -36,9 +38,7 @@ async function getAllAlunos(req, res) { // Função assíncrona para buscar todo
         // Consultando os alunos no banco de dados com paginação, ordenando pelo nome do aluno em ordem alfabética
         const [alunos] = await pool.query('SELECT * FROM aluno ORDER BY nome ASC LIMIT ? OFFSET ?', [limite, (pagina * limite) - limite]);
 
-        const resultados = alunos[0]; // Obtendo os alunos encontrados na consulta SQL
-        
-        const { senha: _, ...alunoSemSenha } = resultados;
+        const alunoSemSenha = alunos.map(({ senha, ...resto }) => resto);
 
         return res.status(200).json({ alunos: alunoSemSenha, dadosPaginacao:paginacao }); // Retornando uma resposta de sucesso com os alunos encontrados e o objeto de paginação
 

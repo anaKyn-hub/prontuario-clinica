@@ -27,6 +27,7 @@ routes.get(
 routes.get(
     '/alunos/paciente/:id',
     functionUtils.bodyVazio,
+    alunoValidator.getPacientesByAlunoValidator,
     valideErros,
     alunoController.getPacientesByAluno
 ); // Definindo a rota GET /alunos com validação de parâmetros e tratamento de erros

@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
         Errosenha.style.display = "none";
         Erroconfsenha.style.display = "none";
 
-        if (nome.length > 10) {
+        if (nome.length > 255) {
             Erronome.style.display = "block";
         } else if (email.length > 100) {
             Erroemail.style.display = "block";
@@ -101,7 +101,7 @@ async function cadastrarAluno(nome, ra, email, telefone, senha) {
         }
 
         setTimeout(() => {
-            window.location.href = "/prontuario/home/html/tela_inicial.html";
+            window.location.href = "../login/index.html";
         }, 1000);
 
     } catch (erro) {

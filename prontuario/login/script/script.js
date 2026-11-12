@@ -22,18 +22,13 @@ async function fazerLogin(email, senha) {
 
     try {
 
+        const parametros = new URLSearchParams({
+            email, 
+            senha
+        });
+
         const resposta = await fetch(
-            `${API_URL}/api/alunos/login`,
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    email,
-                    senha
-                })
-            }
+            `${API_URL}/api/alunos/login?${parametros.toString()}`
         );
 
         const dados = await resposta.json();

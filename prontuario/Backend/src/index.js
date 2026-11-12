@@ -7,7 +7,7 @@ const alunoRoutes = require('./routes/aluno.routers'); // Importando as rotas re
 const pacienteRoutes = require('./routes/paciente.routers'); // Importando as rotas relacionadas a alunos
 
 const app = express(); // Criando uma instância do servidor web
-const PORT = process.env.PORT; // Definindo a porta do servidor web, usando a variável de ambiente PORT ou 3000 como padrão
+const PORT = process.env.PORT || 3000; // Definindo a porta do servidor web, usando a variável de ambiente PORT ou 3000 como padrão
 
 app.use(cors()); // Usando o middleware cors
 app.use(express.json()); // Usando o middleware express.json() para interpretar requisições com corpo em JSON
